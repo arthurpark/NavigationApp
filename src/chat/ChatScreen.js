@@ -4,8 +4,6 @@
  */
 import React, { Component } from 'react';
 import { View, Text, Button, ListView, StyleSheet, TouchableHighlight } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import RoomScreen from '../room/RoomScreen';
 
 const RoomRow = (props) => (
   <TouchableHighlight onPress={props.onPress}>
@@ -97,27 +95,6 @@ class ChatScreen extends Component {
   };
 }
 
-const routes = {
-  Chat: {
-    path: 'chat',
-    screen: ChatScreen,
-  },
-  Room: {
-    path: 'chat/:name',
-    screen: RoomScreen
-  }
-}
-
-const Navigator = StackNavigator(routes, {
-  mode: 'modal'
-});
-
-Navigator.navigationOptions = {
-  tabBar: {
-    label: 'Chat',
-  },
-};
-
 const styles = StyleSheet.create({
   roomList: {
     flex: 1,
@@ -148,4 +125,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Navigator;
+export default ChatScreen;

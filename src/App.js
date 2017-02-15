@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import { DrawerNavigator, StackNavigator, TabNavigator } from 'react-navigation';
 import HomeScreen from './home/HomeScreen';
-import ChatScreen from './chat/ChatScreen';
+import ChatTabNavigator from './chat/ChatTabNavigator';
 import SettingsScreen from './settings/SettingsScreen';
 import { Routes } from './types';
 
@@ -24,7 +24,7 @@ const tabs: Routes = {
   },
   Chat: {
     path: 'chat',
-    screen: ChatScreen
+    screen: ChatTabNavigator
   },
   Settings: {
     path: 'settings',
