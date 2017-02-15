@@ -17,13 +17,7 @@ import ChatScreen from './chat/ChatScreen';
 import SettingsScreen from './settings/SettingsScreen';
 import { Routes } from './types';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-const routes: Routes = {
+const tabs: Routes = {
   Home: {
     path: 'home',
     screen: HomeScreen
@@ -38,7 +32,7 @@ const routes: Routes = {
   },
 };
 
-const Navigator = TabNavigator(routes,  {
+const Navigator = TabNavigator(tabs,  {
   tabBarOptions: {
     activeTintColor: Platform.OS === 'ios' ? '#e91e63' : '#fff',
   }
@@ -53,5 +47,11 @@ class App extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default App;

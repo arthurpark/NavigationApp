@@ -27,7 +27,6 @@ class Screen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Platform.OS === 'ios' ? 20 : 0,
     flex: 1,
     flexDirection: 'column'
   },

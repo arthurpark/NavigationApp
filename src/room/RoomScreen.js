@@ -21,12 +21,7 @@ const RoomScreen = ({ navigation }) => (
 );
 
 RoomScreen.navigationOptions = {
-  tabBar: {
-    label: 'Room',
-    // icon: ({ tiniColor, focused }) => (
-    //
-    // )
-  }
+  title: ({ state }) => `Chat with ${state.params.name}`
 };
 
 export default RoomScreen;
