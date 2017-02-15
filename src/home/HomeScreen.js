@@ -33,7 +33,6 @@ class HomeScreen extends Component {
         <Modal
           animationType="slide"
           visible={isCreateModalOpen}
-          onRequestClose={() => this.closeCreateModal()}
         >
           <CreateScreen onClose={this.closeCreateModal}/>
         </Modal>

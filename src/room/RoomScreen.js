@@ -9,12 +9,12 @@ import Screen from '../Screen';
 const RoomScreen = ({ navigation }) => (
   <Screen
     headerText="Room"
-    headerBackgroundColor="lightgreen"
-    backgroundColor="green"
+    headerBackgroundColor="violet"
+    backgroundColor="purple"
   >
     <Text>Room Screen</Text>
     <Button
-      onPress={() => navigation.navigate('Home')}
+      onPress={() => navigation.goBack()}
       title="Back"
     />
   </Screen>
