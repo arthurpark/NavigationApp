@@ -24,6 +24,12 @@ class HomeScreen extends Component {
       </Screen>
     );
   }
+
+  componentDidMount() {
+    // setTimeout(() => {
+    //   this.props.navigation.navigate('ChatTab')
+    // }, 500);
+  }
 }
 
 HomeScreen.navigationOptions = {

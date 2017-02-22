@@ -36,7 +36,8 @@ const tabs: Routes = {
 const Tabs = TabNavigator(tabs,  {
   tabBarOptions: {
     activeTintColor: Platform.OS === 'ios' ? '#e91e63' : '#fff',
-  }
+  },
+  initialRouteName: 'HomeTab',
 });
 
 const routes = {
@@ -49,16 +50,17 @@ const routes = {
   }
 };
 
-const Main = StackNavigator(routes, {
+const MainStack = StackNavigator(routes, {
   mode: 'modal',
-  headerMode: 'none'
+  headerMode: 'none',
+  initialRouteName: 'Tabs'
 });
 
 class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Main />
+        <MainStack screenProps={undefined} />
       </View>
     );
   }

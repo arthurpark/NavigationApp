@@ -23,9 +23,6 @@ const SettingsScreen = ({ navigation }) => (
 SettingsScreen.navigationOptions = {
   tabBar: {
     label: 'Settings',
-    // icon: ({ tiniColor, focused }) => (
-    //
-    // )
   }
 };
 

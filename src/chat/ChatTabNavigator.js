@@ -17,7 +17,7 @@ const routes = {
 }
 
 const ChatTabNavigator = StackNavigator(routes, {
-  // mode: 'modal'
+  initialRouteName: 'Chat'
 });
 
 ChatTabNavigator.navigationOptions = {
