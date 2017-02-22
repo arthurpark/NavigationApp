@@ -14,7 +14,7 @@ const CreateScreen = ({ navigation, onClose }) => (
   >
     <Text>Create</Text>
     <Button
-      onPress={onClose}
+      onPress={() => navigation.goBack()}
       title="Close"
     />
   </Screen>

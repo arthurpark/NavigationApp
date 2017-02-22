@@ -13,36 +13,52 @@ import {
 } from 'react-native';
 import { DrawerNavigator, StackNavigator, TabNavigator } from 'react-navigation';
 import HomeScreen from './home/HomeScreen';
+import CreateScreen from './create/CreateScreen';
 import ChatTabNavigator from './chat/ChatTabNavigator';
 import SettingsScreen from './settings/SettingsScreen';
 import { Routes } from './types';
 
 const tabs: Routes = {
-  Home: {
+  HomeTab: {
     path: 'home',
     screen: HomeScreen
   },
-  Chat: {
+  ChatTab: {
     path: 'chat',
     screen: ChatTabNavigator
   },
-  Settings: {
+  SettingsTab: {
     path: 'settings',
     screen: SettingsScreen
   },
 };
 
-const Navigator = TabNavigator(tabs,  {
+const Tabs = TabNavigator(tabs,  {
   tabBarOptions: {
     activeTintColor: Platform.OS === 'ios' ? '#e91e63' : '#fff',
   }
+});
+
+const routes = {
+  Tabs: {
+    path: 'tabs',
+    screen: Tabs
+  },
+  CreateModal: {
+    screen: CreateScreen
+  }
+};
+
+const Main = StackNavigator(routes, {
+  mode: 'modal',
+  headerMode: 'none'
 });
 
 class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Navigator />
+        <Main />
       </View>
     );
   }
